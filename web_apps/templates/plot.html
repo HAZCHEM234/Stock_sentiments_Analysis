@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ stock_symbol }} Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: black;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .plot-container {
+            margin-top: 20px;
+        }
+        .plot {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .explanation {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ stock_symbol }} Analysis</h1>
+
+        <div class="plot-container">
+            <h2>Sentiment and Stock Price</h2>
+            <div class="plot">
+                {{ plot_html | safe }}
+            </div>
+
+            <h2>Correlation Heatmap</h2>
+            <div class="plot">
+                {{ heatmap_html | safe }}
+            </div>
+        </div>
+
+        <div class="explanation">
+            {{ correlation_explanation | safe }}
+        </div>
+
+        
+    </div>
+</body>
+</html>
