@@ -7,11 +7,14 @@ This project performs sentiment analysis on stock market data to analyze the cor
 - Fetches sentiment data from CSV files
 - Visualizes sentiment trends and stock prices using Plotly
 - Calculates correlation coefficients between sentiment and stock prices
+- Web Application with interactive graph and correlation matrix
 
 ## Requirements
-- Python 3.x
+- Python 3.4.11
+- Jupyter Notebook
 - Pandas
 - Plotly
+- Flask
 
 ## Installation
 1. Clone the repository:
